@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/wechat_message_padding_bottom" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg" >
+
+        <ImageView
+            android:id="@+id/iv_recv_avatar"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/recv_useravatar"
+            android:scaleType="fitXY"
+            android:onClick="selectRecvAvatar"/>
+
+  <EditText
+
+            android:id="@+id/et_recv_msg"
+        style="@style/chat_content_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_chat_activity"
+        android:layout_toRightOf="@id/iv_recv_avatar"
+        android:autoLink="web"
+        android:background="@drawable/wechat_recv_msg"
+        android:textCursorDrawable="@null"
+        android:gravity="left|center"
+        android:lineSpacingExtra="2dp"
+        android:maxWidth="225.0dip"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="13dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        />
+
+    </RelativeLayout>
+
+</LinearLayout>

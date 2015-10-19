@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:onClick="onClick"
+    android:focusable="false">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/titleBarColor"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="backPressed"
+            android:scaleType="centerInside"
+            android:src="@drawable/top_bar_back"
+            android:padding="11dp" />
+
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="#14191A" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/view_temp"
+            android:textCursorDrawable="@color/black"
+            android:singleLine="true"
+            android:maxWidth="200dp"
+            android:text="@string/username"
+            android:ellipsize="end"
+            android:background="@null"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignParentBottom="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="@dimen/height_top_bar"
+                android:layout_height="@dimen/height_top_bar"
+                android:padding="9dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_single_setting" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+    
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C0C0C0" />
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="4dp" >
+
+            <Button
+                android:id="@+id/line_btn_more"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/icon_chat_voice"
+                android:onClick="onClick"
+                android:layout_alignTop="@+id/edittext_layout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp" />
+
+
+            <RelativeLayout
+                android:id="@+id/edittext_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/line_btn_more"
+                android:layout_toLeftOf="@+id/btn_more"
+                android:layout_toStartOf="@+id/btn_more"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp">
+
+                <!--        <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:minHeight="40dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:paddingTop="3dp"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:id="@+id/editText" />-->
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:minHeight="40dp"
+                    android:id="@+id/et_chat_box"
+                    android:textCursorDrawable="@null"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:paddingTop="3dp"
+                    android:background="@drawable/sel_bg_et_onwhite_underline"
+                    android:imeOptions="actionDone"
+                    android:padding="8.0dip"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textColorHint="#999999"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true" />
+                <!--android:layout_alignTop="@+id/btn_set_mode_voice"-->
+                <ImageView
+                    android:id="@+id/iv_emoticons_checked"
+                    android:layout_width="24dip"
+                    android:layout_height="24dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_margin="1dip"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_chat_emoji_checked"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_emoticons_normal"
+                    android:layout_width="24dip"
+                    android:layout_height="24dip"
+                    android:layout_gravity="center_vertical|right"
+
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_chat_emoji_normal"
+                    android:visibility="visible"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="29dp" />
+
+
+            </RelativeLayout>
+            <ToggleButton
+                android:id="@+id/btn_more"
+                android:layout_width="32dip"
+                android:layout_height="32dip"
+                android:background="@drawable/btn_more"
+                android:textOn=""
+                android:textOff=""
+                android:onClick="onClick"
+                android:checked="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#C0C0C0" />
+
+        <LinearLayout
+            android:id="@+id/more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <LinearLayout
+                android:id="@+id/ll_face_container"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/msg_bar"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp">
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/btn_recv_msg"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/msgfrom"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+
+                />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/btn_send_msg"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/msgto"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+                />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_recv_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/chatfrom_img"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick" />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_send_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/chatto_img"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick" />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_recv_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/voicefrom"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+                />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_send_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/voiceto"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+                />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tool_bar"
+            android:orientation="horizontal"
+            android:layout_below="@+id/msg_bar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:baselineAligned="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp">
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_clearlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/alf"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+                />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/paint_brush"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+                />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/save"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+                />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_template"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/folder"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+                />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_screenshot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/screenshot"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+                />
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/sharethis"
+                app:fab_colorNormal="#FFFFFF"
+                app:fab_colorPressed="#EDEDED"
+                android:onClick="onClick"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#C0C0C0"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bar_bottom"
+        android:layout_below="@id/top_bar"
+        android:id="@+id/back_wall">
+        <ListView
+            android:id="@+id/chatlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="5dp"
+            android:listSelector="#00000000"
+            android:scrollbarStyle="outsideOverlay"
+            android:transcriptMode="normal"
+
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/line_message_padding_bottom" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg" >
+
+            <com.wixappsite.fakechat.fakechat.Fx.RoundImageView
+        android:id="@+id/line_iv_recv_avatar"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+                android:scaleType="fitCenter"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/recv_useravatar"
+            android:onClick="selectRecvAvatar"/>
+
+
+        <EditText
+        android:id="@+id/line_et_recv_msg"
+        style="@style/line_chat_content_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_chat_activity"
+        android:layout_toRightOf="@id/line_iv_recv_avatar"
+        android:autoLink="web"
+        android:background="@drawable/line_recv_msg"
+        android:gravity="left|center"
+        android:lineSpacingExtra="2dp"
+        android:maxWidth="225.0dip"
+            android:textCursorDrawable="@null"
+
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="15dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingRight="10dp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上午 9:17"
+            android:textSize="11sp"
+            android:id="@+id/line_read_date"
+            android:layout_toRightOf="@id/line_et_recv_msg"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/line_et_recv_msg"
+            android:layout_alignBottom="@+id/line_et_recv_msg"
+            android:layout_marginLeft="5dp"
+            android:gravity="bottom" />
+    </RelativeLayout>
+
+</LinearLayout>

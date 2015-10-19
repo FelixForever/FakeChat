@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/ms_padding_bottom" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg" >
+
+        <com.wixappsite.fakechat.fakechat.Fx.RoundImageView
+            android:id="@+id/iv_recv_avatar"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/recv_useravatar"
+            android:onClick="selectRecvAvatar"/>
+        <com.wixappsite.fakechat.fakechat.Fx.ChatImageView
+            android:id="@+id/iv_recv_pic"
+            android:layout_width="130.0dip"
+            android:layout_height="130.0dip"
+            app:chat_image_mask="@drawable/facebook_recv_msg2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:longClickable="true"
+            android:minWidth="130dp"
+            android:minHeight="130dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_recv_avatar"
+            android:maxWidth="225.0dip"
+            android:maxHeight="225.0dip"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

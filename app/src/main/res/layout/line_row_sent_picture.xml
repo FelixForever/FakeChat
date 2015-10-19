@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/line_message_padding_bottom" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg"
+
+        >
+
+        <com.wixappsite.fakechat.fakechat.Fx.RoundCornerImageView
+            android:id="@+id/line_iv_send_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+     android:layout_marginRight="8dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:maxWidth="225.0dip"
+            android:minWidth="130dp"
+            android:longClickable="true"
+            android:minHeight="130dp"
+            android:maxHeight="225.0dip"
+            android:src="@drawable/add_img"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:layout_toLeftOf="@+id/line_iv_send_pic"
+            android:layout_toStartOf="@+id/line_iv_send_pic"
+            android:layout_alignBottom="@+id/line_iv_send_pic"
+            android:layout_marginRight="5dp"
+            android:gravity="bottom">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/read"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/line_read_date"
+                android:text="上午 9:17"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

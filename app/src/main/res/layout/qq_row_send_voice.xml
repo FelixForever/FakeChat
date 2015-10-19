@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/wechat_message_padding_bottom" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg"
+
+
+        >
+        <com.wixappsite.fakechat.fakechat.Fx.RoundImageView
+            android:id="@+id/iv_send_avatar"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="@dimen/margin_chat_activity"
+            android:src="@drawable/default_useravatar"
+            android:onClick="selectSendAvatar"/>
+
+        <Button
+
+            android:id="@+id/iv_send_voice"
+            style="@style/line_chat_content_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:background="@drawable/qq_send_msg"
+            android:gravity="left|center"
+            android:lineSpacingExtra="2dp"
+            android:maxWidth="225.0dip"
+            android:layout_marginRight="@dimen/qq_margin_chat_msg"
+            android:textColor="#FFFFFF"
+            android:paddingLeft="10dp"
+            android:textCursorDrawable="@null"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:longClickable="true"
+            android:paddingRight="77dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/iv_send_avatar"
+            android:layout_toStartOf="@+id/iv_send_avatar" />
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:id="@+id/iv_icon_send_voice"
+            android:src="@drawable/qq_icon_send_voice"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/iv_send_voice"
+            android:layout_alignEnd="@+id/iv_send_voice"
+            android:layout_marginEnd="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 &apos;&apos;"
+            android:id="@+id/tv_voice_length"
+            android:layout_marginRight="2dp"
+            android:textSize="13sp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_icon_send_voice"
+            android:layout_toStartOf="@+id/iv_icon_send_voice" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/wechat_message_padding_bottom" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_send_avatar"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/margin_chat_activity"
+            android:src="@drawable/default_useravatar"
+            android:scaleType="fitXY"
+            android:onClick="selectSendAvatar"
+            />
+
+       <EditText
+
+           android:id="@+id/et_send_msg"
+             style="@style/chat_content_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_chat_activity"
+            android:layout_toLeftOf="@id/iv_send_avatar"
+            android:autoLink="web"
+            android:background="@drawable/wechat_send_msg"
+           android:gravity="left|center"
+           android:textCursorDrawable="@null"
+            android:lineSpacingExtra="2dp"
+            android:maxWidth="225.0dip"
+           android:layout_centerHorizontal="true"
+           android:paddingLeft="10dp"
+           android:paddingTop="10dp"
+           android:paddingBottom="10dp"
+           android:paddingRight="13dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

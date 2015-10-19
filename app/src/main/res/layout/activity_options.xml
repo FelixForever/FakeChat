@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e6e1"
+    android:id="@+id/options_layout"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:background="#bedd75" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="#afce65"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:src="@drawable/fakechat"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:id="@+id/imageView3" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:id="@+id/iv_welcome"
+
+            android:src="@drawable/text_fakechat"
+android:layout_marginTop="25dp"
+            android:layout_below="@+id/imageView3"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/iv_select_background"
+        android:src="@drawable/select_background"
+            android:layout_below="@+id/iv_welcome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#9eb85f"
+        android:layout_below="@+id/top_bar"
+        android:id="@+id/relativeLayout"
+        android:visibility="visible" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+
+        android:layout_centerInParent="true"
+        android:id="@+id/relativeLayout2">
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp">
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/iv_wechat"
+            android:src="@drawable/wechat"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/iv_qq"
+            android:src="@drawable/qq"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            />
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:id="@+id/iv_redpau"
+                android:src="@drawable/redpau"
+                android:layout_margin="10dp"
+                android:onClick="onClick"
+                />
+    </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#AAA2A0"
+        android:layout_above="@+id/bottom_bar"
+        android:visibility="gone" />
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+       android:layout_alignParentBottom="true"
+        android:background="#383F4B"
+        android:gravity="bottom"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignLeft="@+id/relativeLayout2"
+        android:layout_alignStart="@+id/relativeLayout2"
+        android:id="@+id/linearLayout3"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/iv_messenger"
+            android:layout_margin="10dp"
+            android:src="@drawable/ms"
+            android:onClick="onClick"
+
+       />
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/iv_line"
+            android:src="@drawable/line"
+
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            />
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/iv_add"
+            android:src="@drawable/add"
+            android:layout_margin="10dp"
+            android:padding="2dp"
+            android:onClick="onClick"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:id="@+id/iv_about"
+        android:src="@drawable/about"
+
+        android:layout_marginTop="25dp"
+        android:onClick="onClick"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_centerHorizontal="true" />
+
+<!--
+    <LinearLayout android:id="@+id/AdLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true" />
+    <LinearLayout
+        android:id="@+id/miniAdLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+        android:orientation="horizontal" />
+-->
+    <LinearLayout
+        android:id="@+id/AdLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

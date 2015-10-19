@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/wechat_message_padding_bottom" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity" >
+
+        <ImageView
+            android:id="@+id/iv_recv_avatar"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/recv_useravatar"
+            android:scaleType="fitXY"
+            android:onClick="selectRecvAvatar"/>
+
+        <Button
+            android:id="@+id/iv_recv_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:layout_toRightOf="@id/iv_recv_avatar"
+            android:background="@drawable/wechat_recv_msg"
+            android:textSize="20dp"
+            android:longClickable="true"
+            android:minWidth="88dp"
+            android:maxWidth="225dp"
+            android:text=" "
+            android:paddingLeft="77dp"
+            android:onClick="onClick"
+         />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/iv_icon_recv_voice"
+            android:src="@drawable/icon_recv_voice"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_recv_avatar"
+            android:layout_alignLeft="@+id/iv_send_voice"
+            android:layout_alignStart="@+id/iv_send_voice"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wechat_tv_recv_voice"
+            android:text="1''"
+            android:textSize="@dimen/wechat_voice_text_size"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/wechat_voice_text"
+            android:layout_toRightOf="@id/iv_recv_voice"
+            android:layout_centerVertical="true"
+            />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

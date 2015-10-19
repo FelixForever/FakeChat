@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/redpau_layout">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ebebeb"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/redpau_top_bar"
+        android:background="@drawable/redpau_top_bg"
+        android:visibility="visible"
+        android:layout_marginBottom="0dp">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/moon_bar"
+            android:id="@+id/moon_bar"
+           android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+        <com.wixappsite.fakechat.fakechat.Fx.CircleImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:onClick="changeAvatar"
+android:scaleType="centerCrop"
+            android:src="@drawable/icon_fakechat"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="89dp" />
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/redpau_top_bar"
+    android:background="#FFFFFF"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:id="@+id/middle_bar"
+    android:paddingBottom="25dp">
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/redpau"
+
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:background="@null"
+        android:layout_gravity="center_vertical"
+        android:textCursorDrawable="@null"
+        android:id="@+id/redpau_name"
+        android:maxLength="43"
+        android:maxLines="1"
+        android:minWidth="10dp"
+
+        android:text="FakeChat" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="的红包"
+        android:textSize="18sp"
+        android:background="@null"
+        android:textCursorDrawable="@null"
+        android:maxLength="16"
+        android:layout_toRightOf="@id/redpau_name"
+        android:maxLines="1"
+        android:id="@+id/s_redpau"
+        android:textColor="@android:color/black"
+        android:visibility="visible" />
+    </LinearLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:hint="恭喜发财，大吉大利！"
+        android:textSize="15sp"
+        android:background="@null"
+        android:textColor="#969696"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:id="@+id/editText2"
+
+        android:textCursorDrawable="@null"
+        android:layout_below="@+id/redpau"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:maxLines="1"
+        android:maxLength="22"
+        android:minWidth="100dp"
+        android:textColorHint="#979797" />
+    <EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1.00"
+        android:textColor="@color/black"
+    android:textSize="62sp"
+    android:background="@null"
+android:textCursorDrawable="@null"
+        android:layout_marginTop="15dp"
+        android:id="@+id/editText3"
+        android:maxLength="8"
+        android:minWidth="50dp"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yuan"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_alignBaseline="@+id/editText3"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_toRightOf="@+id/editText3"
+        android:layout_toEndOf="@+id/editText3"
+        android:id="@+id/yuan"
+        android:layout_marginLeft="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/redpau_text_bot2"
+        android:id="@+id/text_redpau1"
+        android:textColor="#4f6ea5"
+        android:textSize="12.4sp"
+        android:textIsSelectable="false"
+        android:layout_below="@+id/editText3"
+
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:clickable="true" />
+</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/middle_bar"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="36dp"
+                android:layout_alignBottom="@+id/textView5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/message"
+                android:id="@+id/textView4"
+                android:layout_marginTop="42dp"
+                android:textColor="@android:color/black"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_lucky_money"
+                android:id="@+id/textView5"
+                android:layout_marginTop="35dp"
+                android:textColor="#0a57a8"
+                android:textSize="14.4sp"
+                android:layout_below="@+id/textView4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收到的钱可直接用来发红包"
+                android:id="@+id/text_redpau2"
+                android:textColor="#919191"
+                android:textSize="15sp"
+                android:layout_below="@id/textView5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:onClick="onClick"
+                android:focusable="false"
+                android:clickable="true" />
+        </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tool_bar"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_screenshot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:fab_size="mini"
+        app:fab_icon="@drawable/screenshot"
+        app:fab_colorNormal="#FFFFFF"
+        app:fab_colorPressed="#EDEDED"
+        android:onClick="onClick"
+        />
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:fab_size="mini"
+        app:fab_icon="@drawable/sharethis"
+        app:fab_colorNormal="#FFFFFF"
+        app:fab_colorPressed="#EDEDED"
+        android:onClick="onClick"
+        />
+</LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/top_bar_back"
+android:onClick="backPressed"
+            android:padding="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="4dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:id="@+id/divider"
+            android:background="@null"
+            android:layout_alignTop="@+id/iv_back"
+            android:layout_toRightOf="@+id/iv_back"
+            android:layout_toEndOf="@+id/iv_back"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"
+            android:typeface="serif"
+            android:textSize="22dp"
+            android:layout_marginLeft="-2dp"
+            android:visibility="visible"
+            android:editable="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/redpau_details"
+            android:id="@+id/redpau_details"
+            android:textColor="#ffffff"
+            android:visibility="visible"
+            android:layout_toRightOf="@id/divider"
+            android:textSize="15dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="7dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/redpau_securepay"
+            android:id="@+id/textView2"
+            android:textColor="#ffdec6"
+            android:textSize="12dp"
+            android:layout_below="@+id/redpau_details"
+            android:layout_toRightOf="@+id/divider"
+            android:layout_toEndOf="@+id/divider"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="6.5dp" />
+
+    </RelativeLayout>
+
+    </RelativeLayout>

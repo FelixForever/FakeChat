@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/line_message_padding_bottom" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_voice_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/line_send_voice"
+            android:maxWidth="208.0dip"
+            android:longClickable="true"
+            android:maxHeight="112.0dip"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:05"
+            android:id="@+id/line_voice_length"
+            android:layout_marginRight="36dp"
+            android:background="@null"
+            android:layout_marginEnd="36dp"
+            android:textSize="22dp"
+            android:textColor="#349012"
+            android:layout_marginTop="11dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/iv_voice_pic"
+            android:layout_alignEnd="@+id/iv_voice_pic"
+            android:maxLength="4"
+            android:maxLines="1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/iv_voice_pic"
+            android:layout_toStartOf="@+id/iv_voice_pic"
+            android:layout_alignBottom="@+id/iv_voice_pic"
+            android:gravity="center|bottom"
+            android:layout_below="@+id/line_voice_length"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/read"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="right"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上午 9:17"
+                android:textSize="11sp"
+                android:id="@+id/line_read_date"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

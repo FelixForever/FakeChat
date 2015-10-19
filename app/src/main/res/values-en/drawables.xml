@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="welcome_text">@drawable/text_know_play</item>
+    <item type="drawable" name="about_back_normal">@drawable/about_btn_back_en_normal</item>
+    <item type="drawable" name="about_back_pressed">@drawable/about_btn_back_en_pressed</item>
+    <item type="drawable" name="about_btn_normal">@drawable/about_en_normal</item>
+    <item type="drawable" name="about_btn_pressed">@drawable/about_en_pressed</item>
+    <item type="drawable" name="select_background">@drawable/text_select_background_en</item>
+    <item type="drawable" name="draw_text_know_play">@drawable/text_show_creative</item>
+<!--    <item type="drawable" name="about_en_back_normal">@drawable/text_know_play</item>
+    <item type="drawable" name="about_en_back_pressed">@drawable/text_know_play</item>
+    <item type="drawable" name="about_en_btn_normal">@drawable/text_know_play</item>
+    <item type="drawable" name="about_en_btn_pressed">@drawable/text_know_play</item>-->
+</resources>

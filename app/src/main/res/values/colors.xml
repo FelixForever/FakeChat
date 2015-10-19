@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rippelColor">#FFFFFF</color>
+    <color name="titleBarColor">#22292c</color>
+    <!--<color name="ez_et_underline_black">#ff78909c</color>-->
+    <!--<color name="ez_et_underline_black">#22292c</color>-->
+    <color name="ez_et_underline_black">#DFDFDF</color>
+    <!--<color name="ez_et_underline_blue">#ff29b6f6</color>-->
+    <color name="ez_et_underline_blue">#4ec023</color>
+    <color name="black">#000</color>
+    <color name="ez_et_underline_gay">#33000000</color>
+    <color name="line_titlebar_blue">#464e65</color>
+    <color name="qq_titlebar_blue">#17b4eb</color>
+    <color name="line_voice_blue">#5384e0</color>
+    <color name="wechat_voice_text">#bebebe</color>
+    <color name="black75percent">#c0000000</color>
+    <color name="white50percent">#80ffffff</color>
+</resources>

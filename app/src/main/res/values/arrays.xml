@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="about_list">
+        <item>@string/about_version</item>
+        <item>@string/about_website</item>
+        <item>@string/about_suggestion</item>
+        <item>@string/check_version</item>
+    </array>
+    <array name="redpau_text">
+        <item >@string/rp_txt1</item>
+        <item >@string/rp_txt2</item>
+        <item >@string/rp_txt3</item>
+        <item >@string/rp_txt4</item>
+        <item >@string/rp_txt5</item>
+    </array>
+</resources>
+    <!--//<item>@string/about_suggestion</item>-->

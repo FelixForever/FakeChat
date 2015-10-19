@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/wechat_message_padding_bottom" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity" >
+
+        <ImageView
+            android:id="@+id/iv_recv_avatar"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/recv_useravatar"
+            android:scaleType="fitXY"
+            android:onClick="selectRecvAvatar"
+            />
+
+        <RelativeLayout
+            android:id="@+id/row_recv_pic"
+            android:layout_width="130.0dip"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:layout_height="130.0dip"
+            android:longClickable="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:layout_toRightOf="@+id/iv_recv_avatar"
+            >
+
+            <com.wixappsite.fakechat.fakechat.Fx.ChatImageView
+                android:id="@+id/iv_recv_pic"
+                android:layout_width="225.0dip"
+                android:layout_height="225.0dip"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                app:chat_image_mask="@drawable/wechat_recv_msg"
+                android:scaleType="centerCrop"
+                android:longClickable="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/add_img"
+                android:maxWidth="225.0dip"
+                android:maxHeight="225.0dip"
+         />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.wixappsite.fakechat.fakechat"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+}
+/*
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile files('libs/AppOffer_2.4.2.jar')
+}
+*/
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'com.getbase:floatingactionbutton:1.10.0'
+    compile files('libs/AppOffer_2.4.2.jar')
+}
+dependencies {
+
+    compile 'com.android.support:appcompat-v7:23.0.1'
+}
+

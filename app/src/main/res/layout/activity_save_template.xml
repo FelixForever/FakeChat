@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        style="@style/header1"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/btn_save_template_back"
+            style="@style/header1_ibt"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/icon_back"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:id="@id/title"
+            style="@style/header1_title"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/template" />
+
+        <ImageButton
+            android:id="@+id/del"
+            style="@style/header1_ibt"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_delete"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ac_tag_et_name"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="@dimen/ez_space_medium"
+                android:background="@drawable/sel_bg_et_onwhite_underline"
+                android:hint="@string/hint_template"
+                android:imeOptions="actionDone"
+                android:padding="8.0dip"
+                android:singleLine="true"
+                android:textColor="#616161"
+                android:textColorHint="#999999"
+                android:textSize="@dimen/ez_text_medium" />
+        </LinearLayout>
+
+    </ScrollView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_caution"
+
+        android:textColor="#616161"
+        android:textSize="13dp"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp" />
+    <Button
+        android:id="@+id/btn_save_template"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_register_bg"
+        android:layout_margin="15dp"
+        android:text="@string/save_template_save"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+android:onClick="onClick"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

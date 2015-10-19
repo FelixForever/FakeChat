@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/line_message_padding_bottom" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg" >
+
+        <com.wixappsite.fakechat.fakechat.Fx.RoundImageView
+            android:id="@+id/iv_recv_avatar"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/recv_useravatar"
+            android:onClick="selectRecvAvatar"/>
+        <com.wixappsite.fakechat.fakechat.Fx.RoundCornerImageView
+            android:id="@+id/iv_recv_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/add_img"
+            android:layout_toRightOf="@+id/iv_recv_avatar"
+            android:scaleType="fitXY"
+            android:longClickable="true"
+            android:minWidth="130dp"
+
+            android:minHeight="130dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="225.0dip"
+            android:maxHeight="225.0dip"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上午 9:17"
+            android:textSize="11sp"
+            android:id="@+id/line_read_date"
+            android:layout_toRightOf="@id/iv_recv_pic"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+
+            android:layout_toEndOf="@+id/iv_recv_pic"
+            android:layout_alignBottom="@+id/iv_recv_pic"
+            android:layout_marginLeft="5dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

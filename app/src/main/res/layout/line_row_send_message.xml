@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/line_message_padding_bottom" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg"
+
+        >
+
+        <EditText
+
+            android:id="@+id/line_et_send_msg"
+            style="@style/line_chat_content_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:background="@drawable/line_send_msg"
+            android:gravity="left|center"
+            android:lineSpacingExtra="2dp"
+            android:maxWidth="225.0dip"
+            android:paddingLeft="10dp"
+            android:textCursorDrawable="@null"
+            android:layout_marginRight="8dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingRight="15dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:layout_toLeftOf="@+id/line_et_send_msg"
+            android:layout_toStartOf="@+id/line_et_send_msg"
+            android:gravity="center|bottom"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/read"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="right"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上午 9:17"
+                android:id="@+id/line_read_date"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

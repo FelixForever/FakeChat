@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/ms_padding_bottom" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_msg"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/iv_voice_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@drawable/facebook_send_voice2"
+            android:maxWidth="208.0dip"
+            android:maxHeight="112.0dip"
+            android:longClickable="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:05"
+            android:id="@+id/et_voice_length"
+            android:layout_marginRight="13dp"
+            android:background="@null"
+            android:layout_marginEnd="13dp"
+            android:textSize="10dp"
+            android:textColor="#015db0"
+            android:maxLength="5"
+            android:minWidth="50dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/iv_voice_pic"
+            android:layout_alignEnd="@+id/iv_voice_pic"
+            android:maxLines="1" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
