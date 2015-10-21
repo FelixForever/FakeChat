@@ -46,7 +46,7 @@ import java.util.List;
 /**
  * Created by Wix on 2015/9/27.
  */
-public class MessengerActivity extends Activity implements ConfirmDialog.confirmDialogListener{
+public class MessengerActivity extends BaseChatActivity implements ConfirmDialog.confirmDialogListener{
     List<Message> msgList = new ArrayList<Message>();
     private ListView lvChat;
     private EditText chatbox;

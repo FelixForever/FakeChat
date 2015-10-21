@@ -1,9 +1,6 @@
 package com.wixappsite.fakechat.fakechat.Activity;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -19,14 +16,14 @@ import cn.waps.AppConnect;
 /**
  * Created by Wix on 2015/9/26.
  */
-public class OptionsActivity extends Activity {
+public class OptionsActivity extends BaseActivity {
     private static final String FIRST_TIME = "FirstTime";
     private SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_options);
+        setContentView(R.layout.activity_options_new);
         //checkNews();
 
         sp = getSharedPreferences("FakeChat", Context.MODE_PRIVATE);

@@ -1,64 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
     android:id="@+id/root_layout"
+    style="@style/layout_all"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebebeb"
+    android:background="#ffffff"
+    android:focusable="false"
     android:onClick="onClick"
     android:windowTranslucentStatus="true"
-    android:focusable="false"
     >
 
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:background="#FFFFFF"
         android:layout_alignParentTop="true"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp">
+        android:background="#FFFFFF"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp">
+
         <ImageView
             android:id="@+id/facebook_btn_back"
             android:layout_width="25dp"
             android:layout_height="40dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/facebook_back"
-            android:paddingTop="10dp"
-android:onClick="backPressed"
+            android:onClick="backPressed"
             android:paddingBottom="10dp"
-            android:paddingLeft="0dp" />
-<LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_toStartOf="@+id/facebook_set_group"
-    android:layout_toLeftOf="@+id/facebook_set_group"
-    android:id="@+id/linearLayout2"></LinearLayout>
+            android:paddingLeft="0dp"
+            android:paddingTop="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/facebook_back"/>
+
         <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/facebook_set_group"
+            android:layout_toStartOf="@+id/facebook_set_group"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/facebook_set_group"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:id="@+id/facebook_set_group">
+            android:layout_centerVertical="true">
+
             <ImageView
 
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:padding="13dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/facebook_camera"
-                android:layout_marginRight="10dp"
-                android:padding="13dp"
-               />
+                />
+
             <ImageView
 
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:padding="13dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/facebook_call"
-                android:padding="13dp"
-                android:layout_marginRight="10dp"
-                 />
+                />
 
             <ImageView
 
@@ -69,50 +76,53 @@ android:onClick="backPressed"
                 android:src="@drawable/facebook_information"
                 />
         </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_centerVertical="true"
-    android:layout_toRightOf="@+id/facebook_btn_back"
-    android:layout_marginLeft="3dp"
-    android:layout_alignRight="@+id/linearLayout2"
-    android:layout_alignEnd="@+id/linearLayout2">
-        <EditText
-            android:id="@+id/name"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:maxWidth="200dp"
-            android:text="@string/username"
-            android:ellipsize="end"
-            android:background="@null"
-            android:textSize="16sp"
-            android:layout_alignWithParentIfMissing="false"
-            android:textAlignment="center"
-android:textColor="#000"
-            android:gravity="left"
+            android:layout_alignEnd="@+id/linearLayout2"
+            android:layout_alignRight="@+id/linearLayout2"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/linearLayout2"
+            android:layout_marginLeft="3dp"
             android:layout_toRightOf="@+id/facebook_btn_back"
-            android:layout_toEndOf="@+id/facebook_btn_back" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:textSize="10sp"
-            android:textColor="#bbbbbb"
-            android:text="@string/afk_time"/>
-</LinearLayout>
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/facebook_btn_back"
+                android:layout_toLeftOf="@+id/linearLayout2"
+                android:layout_toRightOf="@+id/facebook_btn_back"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxWidth="200dp"
+                android:singleLine="true"
+                android:text="@string/username"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@string/afk_time"
+                android:textColor="#bbbbbb"
+                android:textSize="10sp"/>
+        </LinearLayout>
     </RelativeLayout>
 
 
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
+        android:layout_below="@+id/top_bar"
         android:background="#eaeaea"
-        android:visibility="visible"
-        android:layout_below="@+id/top_bar"/>
+        android:visibility="visible"/>
 
     <RelativeLayout
         android:id="@+id/bar_bottom"
@@ -127,7 +137,7 @@ android:textColor="#000"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="#C0C0C0"
-            android:visibility="visible" />
+            android:visibility="visible"/>
 
         <RelativeLayout
             android:id="@+id/rl_bottom"
@@ -135,163 +145,172 @@ android:textColor="#000"
             android:layout_height="100dp"
             android:background="#FFFFFF"
 
- >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:id="@+id/linearLayout"
-    android:paddingRight="5dp"
-   android:paddingLeft="5dp">
+            >
 
-            <ImageView
-
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/facebook_text"
-                android:layout_marginTop="10dp"
-                android:padding="6dp"
-                android:layout_marginRight="3dp" />
-
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/facebook_photo"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="3dp"
-                android:padding="6dp"
-           />
-            <ImageView
-
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/facebook_image"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:padding="6dp"
-                android:layout_marginRight="3dp"/>
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/facebook_smile"
-                android:padding="6dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="3dp"
-                />
-
-            <ImageView
-
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="6dp"
-                android:src="@drawable/facebook_voice"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp" />
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/facebook_location"
-                android:padding="6dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="3dp"
-                />
-            <ToggleButton
-                android:layout_width="25dp"
-                android:layout_height="20dp"
-           android:background="@drawable/facebook_btn_more"
-                android:textOn=""
-                android:textOff=""
-                android:checked="true"
-                android:padding="10dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="3dp"
-                android:onClick="onClick"
-                android:id="@+id/facebook_btn_more"
-                android:longClickable="true" />
-</LinearLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@id/linearLayout"
-
-  >
-            <EditText
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="3"
-                android:minHeight="40dp"
-                android:id="@+id/et_chat_box"
-                android:paddingLeft="12dp"
-                android:background="#FFFFFF"
-                android:textCursorDrawable="@null"
-                android:paddingRight="8dp"
-                android:imeOptions="actionDone"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
 
-                android:singleLine="true"
-                android:textColor="#000000"
-                android:textColorHint="#bbbbbb"
-                android:textSize="16sp"
-                android:hint="@string/send_message"
+                <ImageView
 
-                android:textIsSelectable="false"
-                android:autoText="false"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toLeftOf="@+id/facebook_emoji"
-                android:layout_toStartOf="@+id/facebook_emoji" />
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/facebook_emoji"
-                android:id="@+id/facebook_emoji"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="6dp"
+                    android:src="@drawable/facebook_text"/>
 
-                android:padding="7dp"
 
-                android:layout_toLeftOf="@+id/facebook_like"
-                android:layout_toStartOf="@+id/facebook_like"
-                android:layout_marginRight="4dp" />
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/facebook_like"
-                android:id="@+id/facebook_like"
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="6dp"
+                    android:src="@drawable/facebook_photo"
+                    />
 
-                android:layout_marginRight="10dp"
+                <ImageView
 
-                android:layout_marginEnd="10dp"
-                android:layout_alignTop="@+id/facebook_emoji"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:padding="5dp" />
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="6dp"
+                    android:src="@drawable/facebook_image"/>
 
-</RelativeLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="6dp"
+                    android:src="@drawable/facebook_smile"
+                    />
+
+                <ImageView
+
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="6dp"
+                    android:src="@drawable/facebook_voice"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="6dp"
+                    android:src="@drawable/facebook_location"
+                    />
+
+                <ToggleButton
+                    android:id="@+id/facebook_btn_more"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/facebook_btn_more"
+                    android:checked="true"
+                    android:longClickable="true"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:textOff=""
+                    android:textOn=""/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/linearLayout"
+
+                >
+
+                <EditText
+                    android:id="@+id/et_chat_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/facebook_emoji"
+                    android:layout_toStartOf="@+id/facebook_emoji"
+                    android:autoText="false"
+                    android:background="#FFFFFF"
+
+                    android:hint="@string/send_message"
+                    android:imeOptions="actionDone"
+                    android:maxLines="3"
+                    android:minHeight="40dp"
+                    android:paddingLeft="12dp"
+
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textColorHint="#bbbbbb"
+                    android:textCursorDrawable="@null"
+                    android:textIsSelectable="false"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/facebook_emoji"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="4dp"
+
+                    android:layout_toLeftOf="@+id/facebook_like"
+
+                    android:layout_toStartOf="@+id/facebook_like"
+                    android:padding="7dp"
+                    android:src="@drawable/facebook_emoji"/>
+
+                <ImageView
+                    android:id="@+id/facebook_like"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+
+                    android:layout_alignParentRight="true"
+
+                    android:layout_alignTop="@+id/facebook_emoji"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:src="@drawable/facebook_like"/>
+
+            </RelativeLayout>
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
+            android:layout_above="@+id/facebook_more"
             android:background="#C0C0C0"
-            android:visibility="visible"
-            android:layout_above="@+id/facebook_more"/>
+            android:visibility="visible"/>
 
         <LinearLayout
             android:id="@+id/facebook_more"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/rl_bottom"
             android:background="#FFFFFF"
             android:orientation="horizontal"
             android:visibility="visible"
-            android:layout_below="@id/rl_bottom"
             >
-            <LinearLayout
+
+            <include layout="@layout/viewpager_container"/>
+            <!--<LinearLayout
                 android:id="@+id/ll_face_container"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -487,30 +506,30 @@ android:textColor="#000"
                 android:layout_height="0.5dp"
                 android:background="#C0C0C0"
                 android:visibility="gone" />
-
+-->
         </LinearLayout>
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/back_wall"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bar_bottom"
-        android:layout_below="@id/top_bar"
-        android:id="@+id/back_wall">
+        android:layout_below="@id/top_bar">
 
         <ListView
             android:id="@+id/facebook_chatlist"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-      android:layout_marginTop="0.5dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#FFFFFF"
             android:cacheColorHint="#00000000"
             android:divider="@null"
             android:dividerHeight="5dp"
             android:listSelector="#00000000"
             android:scrollbarStyle="outsideOverlay"
-            android:transcriptMode="normal"
-            android:background="#FFFFFF" />
+            android:transcriptMode="normal"/>
 
 
     </RelativeLayout>

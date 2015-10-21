@@ -1,98 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
     android:id="@+id/root_layout"
+    style="@style/layout_all"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebebeb"
+    android:background="@color/qq_titlebar_blue"
+    android:focusable="false"
     android:onClick="onClick"
     android:windowTranslucentStatus="true"
-    android:focusable="false"
     >
 
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/qq_height_top_bar"
-        android:background="@color/qq_titlebar_blue"
         android:layout_alignParentTop="true"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp">
+        android:background="@color/qq_titlebar_blue"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp">
+
         <ImageView
             android:id="@+id/qq_back"
             android:layout_width="30dp"
             android:layout_height="45dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/qq_back"
-            android:paddingTop="12dp"
             android:onClick="backPressed"
             android:paddingBottom="12dp"
-            android:paddingRight="-10dp"
             android:paddingLeft="0dp"
-          />
+            android:paddingRight="-10dp"
+            android:paddingTop="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/qq_back"
+            />
+
         <EditText
             android:id="@+id/qq_backmsg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:maxWidth="200dp"
-            android:text="消息(3)"
-            android:ellipsize="end"
-            android:background="@null"
-            android:textColor="#ffffff"
-            android:textSize="16sp"
             android:layout_alignWithParentIfMissing="false"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/qq_back"
+            android:background="@null"
+            android:ellipsize="end"
+            android:maxWidth="200dp"
+            android:minWidth="50dp"
+            android:singleLine="true"
+            android:text="消息(3)"
             android:textAlignment="center"
+            android:textColor="#ffffff"
 
-            android:minWidth="50dp" />
+            android:textSize="16sp"/>
+
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:maxWidth="200dp"
-            android:text="@string/username"
-            android:ellipsize="end"
-            android:background="@null"
-            android:textColor="#ffffff"
-            android:textSize="18sp"
+            android:layout_alignParentRight="false"
             android:layout_alignWithParentIfMissing="false"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/qq_backmsg"
-            android:layout_toStartOf="@+id/qq_set_group"
             android:layout_toLeftOf="@+id/qq_set_group"
             android:layout_toRightOf="@+id/qq_backmsg"
+            android:layout_toStartOf="@+id/qq_set_group"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxWidth="200dp"
+            android:singleLine="true"
+            android:text="@string/username"
             android:textAlignment="center"
 
-            android:layout_alignParentRight="false"
-            android:gravity="center_horizontal" />
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
 
         <LinearLayout
+            android:id="@+id/qq_set_group"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:id="@+id/qq_set_group">
+            android:layout_centerVertical="true">
 
             <ImageView
                 android:id="@+id/qq_call"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:scaleType="centerInside"
-                android:src="@drawable/qq_call"
+                android:layout_marginRight="-10dp"
                 android:padding="10dp"
-                android:layout_marginRight="-10dp" />
+                android:scaleType="centerInside"
+                android:src="@drawable/qq_call"/>
 
             <ImageView
 
+                android:id="@+id/qq_ppl"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:padding="10dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/qq_ppl"
-                android:id="@+id/qq_ppl" />
+                android:src="@drawable/qq_ppl"/>
 
         </LinearLayout>
     </RelativeLayout>
@@ -110,7 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="#C0C0C0"
-            android:visibility="visible" />
+            android:visibility="visible"/>
 
         <RelativeLayout
             android:id="@+id/rl_bottom"
@@ -124,70 +129,69 @@
                 android:id="@+id/qq_btn_more"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/qq_smile"
-                android:layout_alignTop="@+id/edittext_layout"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginLeft="10dp" />
+                android:layout_alignTop="@+id/edittext_layout"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/qq_smile"/>
 
 
             <ToggleButton
                 android:id="@+id/qq_iv_more"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_gravity="center_vertical|right"
-android:background="@drawable/qq_btn_more"
-                android:scaleType="fitCenter"
-                android:textOn=""
-                android:textOff=""
-                android:checked="true"
-                android:visibility="visible"
-
-                android:layout_toRightOf="@+id/qq_btn_more"
-                android:layout_marginLeft="10dp"
-                android:onClick="onClick"
                 android:layout_alignBottom="@+id/qq_btn_more"
-                android:layout_alignTop="@+id/edittext_layout" />
+                android:layout_alignTop="@+id/edittext_layout"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/qq_btn_more"
+                android:background="@drawable/qq_btn_more"
+                android:checked="true"
+
+                android:onClick="onClick"
+                android:scaleType="fitCenter"
+                android:textOff=""
+                android:textOn=""
+                android:visibility="visible"/>
 
             <RelativeLayout
                 android:id="@+id/edittext_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
-                android:layout_weight="1"
-                android:gravity="bottom"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="8dp"
-                android:layout_toLeftOf="@+id/qq_blue_box"
+                android:layout_marginBottom="3dp"
                 android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/qq_iv_more"
+                android:layout_toLeftOf="@+id/qq_blue_box"
                 android:layout_toRightOf="@+id/qq_iv_more"
-                android:layout_toEndOf="@+id/qq_iv_more">
-
+                android:layout_weight="1"
+                android:gravity="bottom">
 
 
                 <EditText
+                    android:id="@+id/et_chat_box"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="3"
-                    android:minHeight="40dp"
-                    android:paddingLeft="8dp"
-                    android:id="@+id/et_chat_box"
-                    android:paddingRight="8dp"
-                    android:textCursorDrawable="@null"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/iv_emoticons_checked"
                     android:background="@drawable/rounded_edittext"
                     android:imeOptions="actionDone"
+                    android:maxLines="3"
+
+                    android:minHeight="40dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
                     android:singleLine="true"
                     android:textColor="#000000"
-
                     android:textColorHint="#999999"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="3dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/iv_emoticons_checked"
-                    android:layout_marginLeft="8dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:textIsSelectable="false" />
+                    android:textCursorDrawable="@null"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"/>
 
                 <ImageView
                     android:id="@+id/iv_emoticons_checked"
@@ -199,33 +203,33 @@ android:background="@drawable/qq_btn_more"
                     android:layout_margin="1dip"
                     android:scaleType="fitCenter"
                     android:src="@drawable/icon_chat_emoji_checked"
-                    android:visibility="gone" />
+                    android:visibility="gone"/>
 
 
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
                 android:id="@+id/qq_blue_box"
+                android:layout_width="70dp"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="5dp"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp">
+                android:paddingTop="5dp">
 
 
                 <Button
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/qq_voice"
-                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/qq_voice"/>
             </LinearLayout>
 
         </RelativeLayout>
@@ -234,7 +238,7 @@ android:background="@drawable/qq_btn_more"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="#C0C0C0"
-            android:visibility="visible" />
+            android:visibility="visible"/>
 
         <LinearLayout
             android:id="@+id/qq_more"
@@ -244,7 +248,9 @@ android:background="@drawable/qq_btn_more"
             android:orientation="horizontal"
             android:visibility="visible"
             >
-            <LinearLayout
+
+            <include layout="@layout/viewpager_container"/>
+            <!--<LinearLayout
                 android:id="@+id/ll_face_container"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -439,30 +445,30 @@ android:background="@drawable/qq_btn_more"
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#C0C0C0"
-                android:visibility="gone" />
+                android:visibility="gone" />-->
 
         </LinearLayout>
 
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/back_wall"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bar_bottom"
-        android:layout_below="@id/top_bar"
-        android:id="@+id/back_wall">
+        android:layout_below="@id/top_bar">
 
         <ListView
             android:id="@+id/qq_chatlist"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/qq_bg"
             android:cacheColorHint="#00000000"
             android:divider="@null"
             android:dividerHeight="5dp"
             android:listSelector="#00000000"
             android:scrollbarStyle="outsideOverlay"
-            android:transcriptMode="normal"
-            android:background="@drawable/qq_bg" />
+            android:transcriptMode="normal"/>
 
 
     </RelativeLayout>

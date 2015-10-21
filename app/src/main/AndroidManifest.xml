@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wixappsite.fakechat.fakechat"
-    android:versionCode="1"
-    android:versionName="1.0.0">
+<manifest package="com.wixappsite.fakechat.fakechat"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="1"
+          android:versionName="1.0.0">
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <uses-feature android:name="android.hardware.camera"></uses-feature>
     <grant-uri-permission
         android:path="string"
         android:pathPattern="string"
-        android:pathPrefix="string" />
+        android:pathPrefix="string"/>
     <application
         android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/icon_fakechat"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <meta-data android:name="APP_ID"
+        <meta-data
+            android:name="APP_ID"
             android:value="0075591fb2bf2cbde6ebf66b37d15a69"/>
-        <meta-data android:name="APP_PID"
+        <meta-data
+            android:name="APP_PID"
             android:value="default"/>
+
         <activity
             android:name=".Activity.MainActivity"
             android:label="@string/app_name"></activity>
@@ -41,40 +44,42 @@
             android:windowSoftInputMode="adjustResize">
 
         </activity>
-        <activity android:name=".Activity.LoadTemplateActivity" />
+        <activity android:name=".Activity.LoadTemplateActivity"/>
         <activity
             android:name=".Activity.WelcomeActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".Activity.OptionsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Activity.LineActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="adjustPan|stateHidden" />
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name=".Activity.QQActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="adjustPan|stateHidden" />
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name=".Activity.MessengerActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="adjustPan|stateHidden" />
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name=".Activity.RedPauActivity"
             android:immersive="true"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden" />
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name=".Activity.AboutActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

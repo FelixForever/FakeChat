@@ -50,7 +50,7 @@ import java.util.List;
 /**
  * Created by Wix on 2015/9/27.
  */
-public class QQActivity extends Activity implements ConfirmDialog.confirmDialogListener{
+public class QQActivity extends BaseChatActivity implements ConfirmDialog.confirmDialogListener{
     List<Message> msgList = new ArrayList<Message>();
     List<Message> msgListTemp = new ArrayList<Message>();
     private ListView lvChat;

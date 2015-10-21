@@ -15,4 +15,6 @@
     <color name="wechat_voice_text">#bebebe</color>
     <color name="black75percent">#c0000000</color>
     <color name="white50percent">#80ffffff</color>
+
+    <color name="cover_color">#48ffffff</color>
 </resources>

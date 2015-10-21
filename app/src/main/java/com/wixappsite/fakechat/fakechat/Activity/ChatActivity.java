@@ -1,6 +1,5 @@
 package com.wixappsite.fakechat.fakechat.Activity;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -53,7 +52,7 @@ import java.util.List;
 /**
  * Created by Wix on 2015/9/14.
  */
-public class ChatActivity extends Activity implements ConfirmDialog.confirmDialogListener
+public class ChatActivity extends BaseChatActivity implements ConfirmDialog.confirmDialogListener
 {
     List<Message> msgList = new ArrayList<Message>();
     List<Message> msgListTemp = new ArrayList<Message>();
@@ -82,6 +81,9 @@ public class ChatActivity extends Activity implements ConfirmDialog.confirmDialo
     private ToggleButton btn_more;
     private int id;
 
+//    private ViewPager mVPContainer;
+//    private List<View>listViews;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -90,7 +92,7 @@ public class ChatActivity extends Activity implements ConfirmDialog.confirmDialo
         path = Environment.getExternalStorageDirectory() + File.separator + Environment.DIRECTORY_DCIM;
         lvChat = (ListView) findViewById(R.id.chatlist);
 
-        fam = (LinearLayout) findViewById(R.id.msg_bar);
+       // fam = (LinearLayout) findViewById(R.id.msg_bar);
         fat = (LinearLayout) findViewById(R.id.tool_bar);
         chatbox = (EditText) findViewById(R.id.et_chat_box);
         name = (EditText) findViewById(R.id.name);
@@ -123,6 +125,14 @@ public class ChatActivity extends Activity implements ConfirmDialog.confirmDialo
             }
         });
         addTimeStamp();
+
+       /* mVPContainer=(ViewPager)findViewById(R.id.vp_container);
+        listViews = new ArrayList<View>();
+        LayoutInflater mInflater = getLayoutInflater();
+        listViews.add(mInflater.inflate(R.layout.viewpager_1st, null));
+        listViews.add(mInflater.inflate(R.layout.viewpager_2nd, null));
+        mVPContainer.setAdapter(new MyPagerAdapter(listViews));
+        mVPContainer.setCurrentItem(0);*/
     }
 
     public void showDelDialog(final int position)
@@ -156,6 +166,7 @@ public class ChatActivity extends Activity implements ConfirmDialog.confirmDialo
     {
         MessageUtils.shareScreenshot(this);
     }
+
 
     public void onClick(View view)
     {
@@ -399,7 +410,7 @@ public class ChatActivity extends Activity implements ConfirmDialog.confirmDialo
                     break;
                 case 4:
                     BitmapDrawable DrawableBitmap = new BitmapDrawable(bitmap);
-                    findViewById(R.id.root_layout).setBackground(DrawableBitmap);
+                    findViewById(R.id.root_layout).setBackgroundDrawable(DrawableBitmap);
                     break;
             }
             lvChat.setAdapter(chatAdapter);
@@ -572,5 +583,9 @@ public class ChatActivity extends Activity implements ConfirmDialog.confirmDialo
             MessageUtils.takeScreenshot(this);
         }
     }
+
+
+
+
 }
 

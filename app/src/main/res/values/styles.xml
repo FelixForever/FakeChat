@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:windowNoTitle">true</item>
       <!--<item name="android:windowAnimationStyle">@style/anim_activity</item>-->
@@ -68,5 +68,29 @@
         <item name="android:divider">#ffe1e1e1</item>
         <item name="android:dividerHeight">1.0px</item>
         <item name="android:smoothScrollbar">true</item>
+    </style>
+
+    <style name="activity_chat_imgview">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="main_icon_imgview">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:foregroundGravity">center</item>
+    </style>
+
+    <style name="layout_all">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:clipToPadding">true</item>
     </style>
 </resources>

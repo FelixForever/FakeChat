@@ -14,8 +14,6 @@ import com.wixappsite.fakechat.fakechat.App;
 import com.wixappsite.fakechat.fakechat.R;
 import com.wixappsite.fakechat.fakechat.Utils.DoNet;
 
-import java.util.concurrent.TimeUnit;
-
 import cn.waps.AppConnect;
 
 public class WelcomeActivity extends Activity {
@@ -44,7 +42,7 @@ public class WelcomeActivity extends Activity {
             // TODO Auto-generated method stub
 
 
-            SystemClock.sleep(TimeUnit.SECONDS.toMillis(3));
+            SystemClock.sleep(500);
             new DoNet(2, svr,"IMEI=\""+App.IMEI + "\"&From=\"website\"", new DoNet.OkCallBack() {
                 @Override
                 public Void OnOk(String result) {

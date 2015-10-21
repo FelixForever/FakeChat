@@ -22,4 +22,8 @@
     <dimen name="qq_margin_chat_msg">6dp</dimen>
     <dimen name="line_message_padding_bottom">5dp</dimen>
     <dimen name="ms_padding_bottom">1dp</dimen>
+
+
+    <dimen name="cover_padding">2dp</dimen>
+
 </resources>

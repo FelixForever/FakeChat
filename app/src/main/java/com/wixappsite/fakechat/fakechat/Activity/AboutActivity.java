@@ -1,6 +1,5 @@
 package com.wixappsite.fakechat.fakechat.Activity;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -25,7 +24,7 @@ import com.wixappsite.fakechat.fakechat.Utils.DoNet;
 /**
  * Created by Wix on 2015/10/2.
  */
-public class AboutActivity extends Activity
+public class AboutActivity extends BaseActivity
 {
     private ListView listview;
     private String[] items = new String[4];
