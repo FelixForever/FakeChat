@@ -43,7 +43,6 @@ import com.wixappsite.fakechat.fakechat.Utils.TextListener;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -372,10 +371,7 @@ public class ChatActivity extends BaseChatActivity implements ConfirmDialog.conf
                         android.provider.MediaStore.Images.Media.insertImage(getContentResolver(), bitmap, null, null);
                         sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, uri));
                         image_path = null;
-                    } catch (FileNotFoundException e)
-                    {
-                        e.printStackTrace();
-                    } catch (IOException e)
+                    } catch (Exception e)
                     {
                         e.printStackTrace();
                     }
